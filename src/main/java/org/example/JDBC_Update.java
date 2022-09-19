@@ -19,10 +19,11 @@ public class JDBC_Update {
             statement = connection.createStatement();
 
             String sqlInsert = "INSERT INTO ksiazki(autor,tytul,wydawnictwo,stron,rok)VALUES"
-                    + "('Mariusz Duka','PHP7 i SQL','Helion',215,2020)";
+                    + "('Aleksander Fredro','Zemsta','Helion',90,1920),"
+                    + "('Katarzyna Nosowska','Ale ja żem jej powiedziała','Wielka Literatura',202,2020)";
 
             statement.executeUpdate(sqlInsert);
-            
+
             String sqlSelect = "SELECT * FROM ksiazki";
 
             resultSet = statement.executeQuery(sqlSelect);
