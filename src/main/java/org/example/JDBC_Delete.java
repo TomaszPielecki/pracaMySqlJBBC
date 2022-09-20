@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JDBC_Update {
+public class JDBC_Delete {
     public static void main(String[] args) {
         Connection connection = null;
         Statement statement = null;
@@ -18,7 +18,7 @@ public class JDBC_Update {
             }
             statement = connection.createStatement();
 
-            String sqlUpdate = "UPDATE kategoria SET nazwa ='SienceFiction' WHERE id in (1,2)";
+            String sqlUpdate = "DELETE FROM kategoria  WHERE id=1;";
 
             statement.executeUpdate(sqlUpdate);
 
